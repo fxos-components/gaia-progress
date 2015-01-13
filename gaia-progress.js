@@ -1,15 +1,24 @@
 ;(function(define){define(function(require,exports,module){
+/*jshint esnext:true*/
+
+/**
+ * Dependencies
+ */
 
 var component = require('gaia-component');
 
+/**
+ * Exports
+ */
+
 module.exports = component.register('gaia-progress', {
   created: function() {
-    this.createShadowRoot().innerHTML = this.template;
+    this.setupShadowRoot();
 
     this.els = {
       inner: this.shadowRoot.querySelector('.inner'),
       bar: this.shadowRoot.querySelector('.bar'),
-    }
+    };
 
     this.value = this.getAttribute('value') || 0;
   },
@@ -38,6 +47,10 @@ module.exports = component.register('gaia-progress', {
   },
 
   template: `
+    <div class="inner">
+      <div class="bar"></div>
+    </div>
+
     <style>
 
       :host {
@@ -94,10 +107,6 @@ module.exports = component.register('gaia-progress', {
       }
 
     </style>
-
-    <div class="inner">
-      <div class="bar"></div>
-    </div>
   `,
 
   globalCss: `
