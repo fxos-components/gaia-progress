@@ -33,5 +33,6 @@
     "gaia-component": "./bower_components/gaia-component/gaia-component.js",
     "gaia-icons": "./bower_components/gaia-icons/gaia-icons.js",
     "pressed": "./bower_components/pressed/pressed.js"
-  }
+  },
+  "version": "0.1.0"
 }
