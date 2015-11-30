@@ -103,14 +103,14 @@ module.exports = component.register('gaia-progress', {
       .no-value .bar {
         left: 0;
 
-        width: calc(100% + 150px);
+        width: 124%;
         animation: moving-backward 1500ms infinite linear;
         background: repeating-linear-gradient(
           135deg,
           var(--highlight-color),
-          var(--highlight-color) 50px,
-          var(--border-color, var(--background-plus)) 50px,
-          var(--border-color, var(--background-plus)) 100px);
+          var(--highlight-color) 8%,
+          var(--border-color, var(--background-plus)) 8%,
+          var(--border-color, var(--background-plus)) 16%);
       }
 
     </style>
@@ -119,7 +119,7 @@ module.exports = component.register('gaia-progress', {
   globalCss: `
     @keyframes moving-backward {
       0% { transform: translateX(0); }
-      100% { transform: translateX(-142px); }
+      100% { transform: translateX(-16%); }
     }
   `
 });
